@@ -7,7 +7,7 @@ import pickle
 df= pd.read_csv('cleaned_data.csv')
 model = pickle.load(open('RidgeModel.pkl', 'rb'))
 
-st.title("Bangalore House Price Prediction")
+st.title(":house_with_garden: Bangalore House Price Prediction")
 st.text("Kindly Select your preference")
 
 df=df['location'].unique()
@@ -42,6 +42,6 @@ if st.button("Submit"):
 
         predict=np.round(predict,2)
         if predict is None:
-            st.error('sorry! something wrong :disappointed')
+            st.error('sorry! something wrong :disappointed:')
         else:
-            st.write("Predicted Price: ₹",predict)
+            st.write(":point_right: Predicted Price: ₹",predict)
