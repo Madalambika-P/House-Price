@@ -1,10 +1,11 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pickle
 import sklearn
+import pickle
 
 df= pd.read_csv('cleaned_data.csv')
+model = pickle.load(open('RidgeModel.pkl', 'rb'))
 
 st.title("Bangalore House Price Prediction")
 st.text("Kindly Select your preference")
@@ -21,7 +22,7 @@ bhk = st.selectbox("Number of Bedrooms", bhk_options, format_func=lambda x: bhk_
 
 bath_display = ("select number of bathroom",1,2,3,4,5,6)
 bath_options = list(range(len(bath_display)))
-bath = st.selectbox("Number of Bedrooms", bath_options, format_func=lambda x: bath_display[x])
+bath = st.selectbox("Number of bathroom", bath_options, format_func=lambda x: bath_display[x])
 
 
 if st.button("Submit"):
@@ -34,8 +35,6 @@ if st.button("Submit"):
     elif sqft<1000 or sqft is None:
         st.write("Please Enter feasible Square Feet")
     else:
-        model = pickle.load(open('RidgeModel.pkl', 'rb'))
-
         input=pd.DataFrame([[df[loc],sqft,bhk,bath]],columns=['location','total_sqft','bhk','bath'])
 
         predict=model.predict(input)[0]*1000000
@@ -43,6 +42,6 @@ if st.button("Submit"):
 
         predict=np.round(predict,2)
         if predict is None:
-            st.error('sorry! something wrong disappointed')
+            st.error('sorry! something wrong :disappointed')
         else:
             st.write("Predicted Price: ₹",predict)
