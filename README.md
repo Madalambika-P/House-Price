@@ -7,5 +7,5 @@
     * Number of Bathroom requirement
 
 
-# below link of the Output of this project to predict the House price depends on your priority
-[click on](https://house-price-obdkqno5oduvpfosjhvw38.streamlit.app/)https://house-price-obdkqno5oduvpfosjhvw38.streamlit.app/
+ below link of the Output of this project to predict the House price depends on your priority
+[click on  ](https://house-price-obdkqno5oduvpfosjhvw38.streamlit.app/)https://house-price-obdkqno5oduvpfosjhvw38.streamlit.app/
