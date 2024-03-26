@@ -39,7 +39,6 @@ if st.button("Submit"):
         input=pd.DataFrame([[df[loc],sqft,bhk,bath]],columns=['location','total_sqft','bhk','bath'])
 
         predict=model.predict(input)[0]*1000000
-        st.write(predict)
 
         predict=np.round(predict,2)
         if predict is None:
