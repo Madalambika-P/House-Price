@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import sklearn
+scikit-learn.__version__=='1.0.2'
+
 import pickle
 
 df= pd.read_csv('cleaned_data.csv')
