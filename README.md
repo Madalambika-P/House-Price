@@ -8,4 +8,4 @@
 
 
  below link of the Output of this project to predict the House price depends on your priority
-[click on  ](https://house-price-obdkqno5oduvpfosjhvw38.streamlit.app/)https://house-price-obdkqno5oduvpfosjhvw38.streamlit.app/
+[click on  ]https://house-price-obdkqno5oduvpfosjhvw38.streamlit.app/
